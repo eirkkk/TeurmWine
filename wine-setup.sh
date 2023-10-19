@@ -5,7 +5,7 @@ pacman-key --init
 pacman-key --populate
 
 # Install required packages
-pacman -Syu glibc gcc-libs-glibc  glibc-runner coreutils-glibc util-linux-glibc libxxf86vm-glibc linux-api-headers-glibc libxml2-utils-glibc libxcb-glibc libx11-glibc libdrm-glibc xkeyboard-config vulkan-headers-glibc xcb-proto-glibc xorg-util-macros-glibc xorgproto-glibc freetype-glibc fontconfig-utils-glibc wget
+pacman -Syu glibc gcc-libs-glibc termux-x11-nightly glibc-runner coreutils-glibc util-linux-glibc libxxf86vm-glibc linux-api-headers-glibc libxml2-utils-glibc libxcb-glibc libx11-glibc libdrm-glibc xkeyboard-config vulkan-headers-glibc xcb-proto-glibc xorg-util-macros-glibc xorgproto-glibc freetype-glibc fontconfig-utils-glibc wget
 
 # Configure environment variables in ~/.bashrc
 echo 'export DISPLAY=:0' >> ~/.bashrc
