@@ -49,5 +49,5 @@ cd /data/data/com.termux/files/usr/
 mv wine-8.14-amd64 wine
 cd
 rm Pacman.sh  pkgs.tar.xz wine-8.14-amd64.tar.xz steup.sh terumwine.tar.xz pkgs
-# Execute your custom 'fix' command
+echo "Execute your custom 'fix' command"
 fix
