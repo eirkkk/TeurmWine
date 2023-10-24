@@ -27,25 +27,23 @@ cd
 rm -rf pkgs
 
 echo "Extract glibc"
-tar -xf glibc-pfx.tar.xz -C /data/data/com.termux/files/usr/glibc
+tar -xf glibc-pfx.tar.xz -C $PREFIX/glibc
 rm glibc-pfx.tar.xz
 
 echo "Extract terumwine.tar.xz"
 tar -xf terumwine.tar.xz
 
 echo "Copy necessary files to Termux installation directory"
-cp -r $HOME/.fix/start /data/data/com.termux/files/usr/bin/
-cp -r $HOME/.fix/fix /data/data/com.termux/files/usr/bin/
-cp -r $HOME/.fix/box /data/data/com.termux/files/usr/bin/
+cp -r $HOME/.fix/Script/* $PREFIX/bin/
 
 echo "Set execute permissions"
-cd /data/data/com.termux/files/usr/bin/
+cd $PREFIX/bin/
 chmod +x box start fix
 cd
 
 echo "Extract wine"
-tar -xf wine-8.14-amd64.tar.xz -C /data/data/com.termux/files/usr/
-cd /data/data/com.termux/files/usr/
+tar -xf wine-8.14-amd64.tar.xz -C $PREFIX
+cd $PREFIX
 mv wine-8.14-amd64 wine
 cd
 rm Pacman.sh  pkgs.tar.xz wine-8.14-amd64.tar.xz steup.sh terumwine.tar.xz pkgs
