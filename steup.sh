@@ -12,19 +12,9 @@ cd
 termux-setup-storage
 
 echo "Download required files"
-wget https://github.com/eirkkk/TeurmWine/releases/download/TeurmWine/pkgs.tar.xz
 wget https://github.com/eirkkk/TeurmWine/releases/download/TeurmWine/glibc-pfx.tar.xz
 wget https://github.com/eirkkk/TeurmWine/releases/download/TeurmWine/terumwine.tar.xz
 wget https://github.com/eirkkk/TeurmWine/releases/download/TeurmWine/wine-8.14-amd64.tar.xz
-
-echo "Extract downloaded files"
-tar -xf pkgs.tar.xz
-
-echo "Install packages using Pacman"
-cd pkgs
-pacman -U --noconfirm * 
-cd
-rm -rf pkgs
 
 echo "Extract glibc"
 tar -xf glibc-pfx.tar.xz -C $PREFIX/glibc
