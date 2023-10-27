@@ -25,7 +25,7 @@ tar -xf terumwine.tar.xz
 
 echo "Copy necessary files to Termux installation directory"
 cp -r $HOME/.fix/Script/* $PREFIX/bin/
-
+cp -r $HOME/.fix/opt $PREFIX/glibc/
 echo "Set execute permissions"
 cd $PREFIX/bin/
 chmod +x box start fix
