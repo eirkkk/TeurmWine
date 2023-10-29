@@ -10,7 +10,8 @@ pacman -S wget
 echo "Change to the home directory and set up Termux storage"
 cd
 termux-setup-storage
-
+mkdir -p $HOME/.local/cache
+mkdir -p $HOME/.fonts
 echo "Download required files"
 wget https://github.com/eirkkk/TeurmWine/releases/download/TeurmWine/glibc-pfx.tar.xz
 wget https://github.com/eirkkk/TeurmWine/releases/download/TeurmWine/terumwine.tar.xz
