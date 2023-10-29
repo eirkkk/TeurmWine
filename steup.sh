@@ -5,7 +5,7 @@ pacman-key --init
 pacman-key --populate 
 
 echo "Update the system and install required packages"
-pacman -Syu --noconfirm glibc gcc-libs-glibc glibc-runner coreutils-glibc util-linux-glibc libxxf86vm-glibc linux-api-headers-glibc libxml2-utils-glibc libxcb-glibc libx11-glibc libdrm-glibc xkeyboard-config vulkan-headers-glibc xcb-proto-glibc xorg-util-macros-glibc xorgproto-glibc freetype-glibc fontconfig-utils-glibc termux-x11-nightly libxfixes-glibc libxshmfence-glibc libxxf86vm-glibc linux-api-headers-glibc libxml2-utils-glibc libxcb-glibc libx11-glibc libdrm-glibc xkeyboard-config vulkan-headers-glibc xcb-proto-glibc xorg-util-macros-glibc xorgproto-glibc freetype-glibc fontconfig-utils-glibc wget pulseaudio 
+pacman -Syu --noconfirm glibc gcc-libs-glibc glibc-runner coreutils-glibc util-linux-glibc libxxf86vm-glibc linux-api-headers-glibc libxml2-utils-glibc libxcb-glibc libx11-glibc libdrm-glibc xkeyboard-config vulkan-headers-glibc xcb-proto-glibc xorg-util-macros-glibc xorgproto-glibc freetype-glibc fontconfig-utils-glibc termux-x11-nightly libxfixes-glibc libxshmfence-glibc libxxf86vm-glibc linux-api-headers-glibc libxml2-utils-glibc libxcb-glibc libx11-glibc libdrm-glibc xkeyboard-config vulkan-headers-glibc xcb-proto-glibc xorg-util-macros-glibc xorgproto-glibc freetype-glibc fontconfig-utils-glibc wget pulseaudio ttf-dejavu 
 pacman -S wget
 echo "Change to the home directory and set up Termux storage"
 cd
