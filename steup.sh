@@ -51,7 +51,7 @@ if [ "$choice" == "1" ]; then
     cp -r lib32/freedreno_icd.armhf.json /data/data/com.termux/files/usr/glibc/share/vulkan/icd.d
     unzip lib64.zip
     cd
-    cp -r lib64/libvulkan_freedreno.so /data/data/com.termux/files/usr/glibc/lib64
+    cp -r lib64/libvulkan_freedreno.so /data/data/com.termux/files/usr/glibc/lib
     cp -r lib64/freedreno_icd.aarch64.json /data/data/com.termux/files/usr/glibc/share/vulkan/icd.d
     echo "You chose version 1."
 elif [ "$choice" == "2" ]; then
