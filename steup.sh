@@ -1,12 +1,9 @@
 #!/bin/bash
 
-echo "Initialize and populate the Pacman keyring"
-pacman-key --init
-pacman-key --populate 
-
-echo "Update the system and install required packages"
-pacman -Syu --noconfirm glibc gcc-libs-glibc glibc-runner coreutils-glibc util-linux-glibc libxxf86vm-glibc linux-api-headers-glibc libxml2-utils-glibc libxcb-glibc libx11-glibc libdrm-glibc xkeyboard-config vulkan-headers-glibc xcb-proto-glibc xorg-util-macros-glibc xorgproto-glibc freetype-glibc fontconfig-utils-glibc termux-x11-nightly libxfixes-glibc libxshmfence-glibc libxxf86vm-glibc linux-api-headers-glibc libxml2-utils-glibc libxcb-glibc libx11-glibc libdrm-glibc xkeyboard-config vulkan-headers-glibc xcb-proto-glibc xorg-util-macros-glibc xorgproto-glibc freetype-glibc fontconfig-utils-glibc wget pulseaudio ttf-dejavu 
-pacman -S wget
+termux-change-repo
+pkg upgrade -y
+pkg install x11-repo tur-repo -y
+pkg install pulseaudio git virglrenderer-android mesa wget fontconfig freetype libpng termux-x11-nightly cabextract zenity openbox file xorg-xrandr xterm iconv termux-exec nnn -y 
 echo "Change to the home directory and set up Termux storage"
 cd
 termux-setup-storage
@@ -18,19 +15,17 @@ wget https://github.com/eirkkk/TeurmWine/releases/download/TeurmWine/terumwine.t
 wget https://github.com/eirkkk/TeurmWine/releases/download/TeurmWine/wine-8.14-amd64.tar.xz
 
 echo "Extract glibc"
-tar -xf glibc-pfx.tar.xz -C $PREFIX/glibc
+tar -xf glibc-pfx.tar.xz -C $PREFIX
 rm glibc-pfx.tar.xz
 
 echo "Extract terumwine.tar.xz"
 tar -xf terumwine.tar.xz
 
 echo "Copy necessary files to Termux installation directory"
+cd $HOME/.fix/Script/
+chmod +x *
 cp -r $HOME/.fix/Script/* $PREFIX/bin/
 cp -r $HOME/.fix/opt $PREFIX/glibc/
-echo "Set execute permissions"
-cd $PREFIX/bin/
-chmod +x box start fix
-cd
 
 echo "Extract wine"
 tar -xf wine-8.14-amd64.tar.xz -C $PREFIX
@@ -62,7 +57,7 @@ else
     echo "Invalid choice. Please enter 1 or 2."
 fi
 
-rm -f pkgs* wine-8.14-amd64.tar.xz terumwine.tar.xz lib32* lib64* Pacman.sh
+rm -f  wine-8.14-amd64.tar.xz terumwine.tar.xz lib32* lib64* steup.sh
 echo "Execute your custom 'fix' command"
 # Replace the following line with the actual command you want to run
 clear 
